@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.Bio>
+
+
+<div>
+    @Html.ActionLink("Create New Bio", "Create", "Bio")
+</div>
+
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Name
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+        <td>
+            @item.Name
+        </td>
+    </tr>
+}
+
+</table>
+

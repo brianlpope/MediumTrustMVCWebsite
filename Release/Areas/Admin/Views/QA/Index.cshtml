@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.QA>
+
+<p>
+    @Html.ActionLink("Create New Question", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Question
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+        <td>
+            @item.Question
+        </td>
+    </tr>
+}
+
+</table>
+

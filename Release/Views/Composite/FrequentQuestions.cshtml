@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.QA>
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        toggleAnswer = function (id) {
+            // hide all exposed answers
+            $(".answer").not("#"+id).slideUp('fast');
+            // show the selected answer
+            $("#" + id).slideDown('fast');
+
+        }
+    });
+</script>
+
+<div id="editActions">
+    @if (User.Identity.IsAuthenticated)
+    {
+        @Html.ActionLink("Create", "Create", "QA", new { area = "Admin" }, null);
+    }
+</div>
+
+<h1>Frequent Questions</h1>
+
+@if (Model.Any())
+{
+    <ol>
+    @foreach (ThreeRoads.Data.Models.QA qa in Model)
+    {
+        @Html.Partial("_FrequentQuestions", qa)
+    }
+    </ol>
+}
+
+
+

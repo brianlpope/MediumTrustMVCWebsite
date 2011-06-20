@@ -1,0 +1,24 @@
+﻿@model ThreeRoads.Data.Models.Event
+
+<div class="eventContainer">
+    <div class="eventTitle">@Model.Title</div>   
+    <span class="eventDate">
+        @Html.LabelFor(model => model.Start)<text>: </text> @Html.DisplayTextFor(model => model.Start)
+    </span>
+    <span class="eventDate">
+        @Html.LabelFor(model => model.End)<text>: </text> @Html.DisplayTextFor(model => model.End)
+    </span>
+    <div class="eventDesc">@Html.Raw(Model.Description)</div>
+    <div class="editActions">
+        @if (User.Identity.IsAuthenticated)
+        {
+            if (Model != null)
+            {
+                @Html.ActionLink("Edit", "Edit", "Event", new { area="Admin", id = Model.ID }, null)
+                @Html.ActionLink("Delete", "Delete", "Event", new { area="Admin", id = Model.ID }, null)
+            }
+        }
+    </div>
+
+    <div class="containerFooter"></div>
+</div>

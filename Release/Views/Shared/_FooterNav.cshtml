@@ -1,0 +1,23 @@
+﻿
+<div id="fnWrapper">
+	<div id="fncontent">
+    @foreach (SiteMapNode node in SiteMap.RootNode.ChildNodes)
+    {
+        if (node.HasChildNodes)
+        {
+		<div>
+            <h5>@node.Title </h5>
+                <ul>
+	                @foreach (SiteMapNode childNode in node.ChildNodes)
+                 {
+		                    <li><a href="@childNode.Url">@childNode.Title</a></li>
+                 }
+                </ul>
+		</div>
+        }
+    }
+</div>
+
+</div>
+
+<div style="clear:both"></div>

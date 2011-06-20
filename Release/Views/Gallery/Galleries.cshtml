@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.Gallery>
+
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+    string galleryPath = System.Configuration.ConfigurationManager.AppSettings["GalleryPath"];
+}
+
+<h2>Gallery</h2>
+
+  <div style="float:left; width: 400px;">
+  @foreach(ThreeRoads.Data.Models.Gallery gallery in Model)
+  {
+    <div style="float:left; width: 100px; height: 100px; border: 1px solid black; margin: 10px;">
+        <a href="@Url.Content(string.Concat("~/inside/gallery/?name=",gallery.Title, "&pageIndex=1"))"><img src="@Path.Combine(Server.MapPath(galleryPath), gallery.FileName)" alt="@gallery.Title" /></a>
+    </div>
+  }
+  </div>

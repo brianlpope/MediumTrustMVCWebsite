@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="/Introduction">
+    <siteMapNode url="/" title="Introduction" description="" resourceKey="introduction">
+      <siteMapNode url="/introduction/values" title="Core Values"  description="" />
+      <siteMapNode url="/introduction/mission" title="Mission &amp; History"  description="" />
+      <siteMapNode url="/introduction/vision" title="Vision"  description="" />
+      <siteMapNode url="/introduction/classical" title="Why Classical?"  description="" />
+      <siteMapNode url="/introduction/christian" title="Why Christian?"  description="" />
+      <siteMapNode url="/introduction/questions" title="Frequent Questions"  description="" />
+      <siteMapNode url="/introduction/resources" title="Resources"  description="" />
+    </siteMapNode>
+    <siteMapNode url="/admissions/overview" title="Admissions" description="" resourceKey="admissions">
+      <siteMapNode url="/admissions/tuition" title="Tuition"  description="" />
+      <siteMapNode url="/admissions/nextsteps" title="Process &amp; Checklist"  description="" />
+      <siteMapNode url="/admissions/downloads" title="Downloads" description="" /> 
+      <siteMapNode url="/admissions/assistance" title="Tuition Assistance"  description="" />
+    </siteMapNode>
+    <siteMapNode url="/inside/legacy" title="Inside the Academy" description="" resourceKey="inside" >
+      <siteMapNode url="/inside/curriculum" title="Curriculum"  description="" />
+      <siteMapNode url="/inside/uniforms" title="Uniforms"  description="" />
+      <siteMapNode url="/downloads/legacyschoolcalendar2010-2011.pdf" title="Calendar"  description="" resourceKey="calendar"  />
+      <siteMapNode url="/inside/board" title="Board"  description="" />
+      <siteMapNode url="/inside/staff" title="Staff"  description="" />
+      <siteMapNode url="/inside/erb" title="Standardized Testing"  description="" />
+      <!--<siteMapNode url="/inside/galleries" title="Gallery"  description=""  />-->
+    </siteMapNode>
+    <siteMapNode url="/legacy/index" title="Leave a Legacy" description="" resourceKey="legacy" >
+      <siteMapNode url="/legacy/donate" title="Donate"  description="" />
+      <siteMapNode url="/legacy/fundraising" title="Fundraising"  description="" />
+      <siteMapNode url="/legacy/wishlist" title="Wish List"  description="" />
+      <!--<siteMapNode url="/Legacy/TellAFriend" title="Tell a Friend"  description=""  />-->
+      <siteMapNode url="/legacy/missionproject" title="Mission Project"  description=""  />
+    </siteMapNode>
+    <siteMapNode url="/contact/contact" title="Contact Us" description="" resourceKey="contact" />
+    <siteMapNode url="/contact/location" title="Our Location" description="" resourceKey="location" />
+  </siteMapNode>
+</siteMap>

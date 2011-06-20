@@ -1,0 +1,26 @@
+﻿@model ThreeRoads.Data.Models.Bio
+
+@{
+    string rootPath = Url.Content(System.Configuration.ConfigurationManager.AppSettings["BioImagePath"]);
+    string imgPath = string.Concat(rootPath, "/", Model.ImageName ?? "");
+}
+
+<div class="bioContainer">
+    <div class="bioPosition">@Model.Position</div>
+    <img class="bioImage" src='@imgPath' alt='@Model.Name' />
+    <div class="bioBody">
+        <div class="bioName">@Model.Name</div>
+        <div class="bioDesc">@Html.Raw(Model.Description)</div>
+        <div class="editActions">
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (Model != null)
+                {
+                    @Html.ActionLink("Edit", "Edit", "Bio", new { area="Admin", id = Model.ID }, null)
+                    @Html.ActionLink("Delete", "Delete", "Bio", new { area = "Admin", id = Model.ID }, null)
+                }
+            }
+        </div>
+    </div>
+</div>
+

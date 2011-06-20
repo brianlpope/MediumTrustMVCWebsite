@@ -1,0 +1,98 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+        if (typeof ThreeRoads === 'undefined') {
+            ThreeRoads = {};
+        }
+        if (typeof ThreeRoads.MVC === 'undefined') {
+            ThreeRoads.MVC = {};
+        }
+
+        if (!ThreeRoads.MVC.Menu) {
+            ThreeRoads.MVC.Menu = {
+                showSubMenu: function (key) {
+                    $('.topSubMenu').css('display', 'none');
+                    $('#' + key).css('display', 'block');
+                }
+            }
+        }
+
+        //ThreeRoads.MVC.Menu.showSubMenu('introduction');
+    });
+</script>
+
+@{
+    string selectedId = "introduction";
+    string displayStyle = "display:none";
+}
+<ul id="topMenu">
+@foreach (SiteMapNode node in SiteMap.RootNode.ChildNodes)
+{
+    if (node.HasChildNodes)
+    {
+        if (Request.Url.Segments.Length > 1 && node.Url.Contains(Request.Url.Segments[1]))
+        {
+            selectedId = @node.ResourceKey;
+        }
+        <li><a href="#" onmouseover="ThreeRoads.MVC.Menu.showSubMenu('@node.ResourceKey');">@node.Title</a></li>
+    }
+}
+</ul>
+
+@foreach (SiteMapNode node in SiteMap.RootNode.ChildNodes)
+{
+    if (node.HasChildNodes)
+    {
+        if (node.ResourceKey == selectedId)
+        {
+            displayStyle = "display:block";
+        }
+        else
+        {
+            displayStyle = "display:none";
+        }
+            
+        <ul id='@node.ResourceKey' class="topSubMenu" style="@displayStyle">
+
+		@foreach (SiteMapNode childNode in node.ChildNodes)
+        {
+			<li><a href="@childNode.Url">@childNode.Title</a></li>
+		
+        }
+		</ul>
+    }
+}
+
+<style type="text/css">
+    #topMenu, .topSubMenu
+    {
+        float:left;
+        margin: 0;
+        padding: 0;
+        padding-left: 15px;
+    }
+    #topMenu ul
+    {
+        clear: both;
+    }
+    #topMenu li, .topSubMenu li 
+    {
+        float: left;
+        list-style-type: none;
+        
+    }
+
+    #topMenu li a, .topSubMenu li a
+    {
+        display: block;
+        height: 24px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+    }
+    
+</style>
+
+

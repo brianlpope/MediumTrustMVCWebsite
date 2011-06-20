@@ -1,0 +1,48 @@
+﻿<style type="text/css">
+    #footerNav
+    {
+        clear:both;
+        font-size: 10px;
+        background: #f0f0f0;
+    }
+    #footerNav div 
+    {
+        float: left;
+        padding: 8px;
+    }
+    #footerNav p
+    {
+        margin: 0;
+    }
+    #footerNav ul
+    {
+        padding-left: 0;
+        margin: 0;
+    }
+    #footerNav li
+    {
+        list-style-type:none;
+    }
+    #footerNav a
+    {
+        text-decoration: none;
+    }
+</style>
+
+<div id="footerNav">
+@foreach (SiteMapNode node in SiteMap.RootNode.ChildNodes)
+{
+	<div>
+    <p>@node.Title</p>
+        @if(node.HasChildNodes)
+        {
+			<ul>
+				@foreach (SiteMapNode childNode in node.ChildNodes)
+                {
+					<li><a href="@childNode.Url">@childNode.Title</a></li>
+                }
+			</ul>
+        }
+	</div>
+}
+</div>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.Form>
+
+
+<div>
+    @Html.ActionLink("Add New Form", "Create", "Form")
+</div>
+
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Name
+        </th>
+        <th>
+            Topic
+        </th>
+        <th>
+            Uploaded
+        </th>
+        <th>
+            Version
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+        <td>
+            @item.Title
+        </td>
+        <td>
+            @item.Description
+        </td>
+        <td>
+            @item.UploadDate
+        </td>
+        <td>
+            @item.Version
+        </td>
+    </tr>
+}
+
+</table>

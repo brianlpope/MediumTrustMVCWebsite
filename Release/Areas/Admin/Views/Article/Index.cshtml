@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.Article>
+
+<div>
+    @Html.ActionLink("Create New Article", "Create", "Article")
+</div>
+
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Topic
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            PublishedOn
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+        <td>
+            @item.Topic
+        </td>
+        <td>
+            @item.Title
+        </td>
+        <td>
+            @String.Format("{0:g}", item.PublishedOn)
+        </td>
+    </tr>
+}
+
+</table>
+

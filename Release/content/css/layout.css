@@ -1,0 +1,105 @@
+
+#header {
+    float:left;
+    width:100%;
+    padding:0;
+    margin:0;
+    border-bottom:1px solid #000;
+}
+
+#colmask {
+    position:relative;  /* This fixes the IE7 overflow hidden bug and stops the layout jumping out of place */
+    clear:both;
+    float:left;
+    width:100%;         /* width of whole page */
+    overflow:hidden;        /* This chops off any overhanging divs */
+    background: url('../../content/image/whitebg.png'); /* background:#ffd8b7;     Left column background colour */
+}
+#colmid {
+    float:left;
+    width:200%;
+    position:relative;
+    left:196px;
+    border-left: 8px solid #36527a;
+}
+#colright {
+    float:left;
+    width:100%;
+    position:relative;
+    left:50%;
+    margin-left:-416px;
+    border-left: 8px solid #36527a;
+}
+#col1wrap {
+    float:right;
+    width:50%;
+    position:relative;
+    right:100%;
+
+}
+#col1pad {
+    margin: 0 0 0 400px;
+    border-right: 8px solid #36527a;
+    border-left: 8px solid #36527a;
+    overflow:hidden;
+}
+#col1 {
+    width:100%;
+    overflow:hidden;
+}
+#col2 {
+    float:left;
+    width:196px;
+    position:relative;
+    margin-left:-50%;
+    left:204px;
+    overflow:hidden;
+    
+
+}
+#col3 {
+    float:left;
+    width:204px;
+    position:relative;
+    overflow:hidden;
+    margin-left: 0;
+}
+#footer {
+    clear:both;
+    float:left;
+    width:100%;
+    padding:0;
+    margin:0;
+    border-top:1px solid #000;
+}
+#footer p {
+    padding:.5em 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+﻿@model ThreeRoads.Data.Models.Resource
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/EditorLayout.cshtml";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Resource</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Category)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("categoryId", (IEnumerable<SelectListItem>)ViewData["categories"])
+         </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Url)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Url)
+            @Html.ValidationMessageFor(model => model.Url)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Topic)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Topic)
+            @Html.ValidationMessageFor(model => model.Topic)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PublishedOn)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PublishedOn)
+            @Html.ValidationMessageFor(model => model.PublishedOn)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DisplayArea)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DisplayArea)
+            @Html.ValidationMessageFor(model => model.DisplayArea)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

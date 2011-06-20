@@ -1,0 +1,9 @@
+﻿@model ThreeRoads.Data.Models.SearchResult
+@{
+    string matchFormat = Model.MatchCount == 1 ? "[{0} match]" : "[{0} matches]";
+}
+<div class="searchResult">
+<div class="url"><a href="@Model.Url">@Model.Name</a></div>
+<div class="value">@Html.Raw(Model.Value)</div>
+<span class="published">@Model.PublishedOn.Value.ToString("MM/dd/yyyy")</span><span class="matchCount">@string.Format(matchFormat, Model.MatchCount)</span>
+</div>

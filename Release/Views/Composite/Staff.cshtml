@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.Bio>
+
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+    ThreeRoads.Data.Models.Article article = ViewBag.Article as ThreeRoads.Data.Models.Article;
+}
+    
+    @if(article != null) {
+        <h1>@article.Title</h1>
+        <p>@Html.Raw(article.Body)</p>
+    }
+
+@if (Model.Any())
+{
+    @*<h1>@ViewBag.Title</h1>*@
+    
+
+    foreach (ThreeRoads.Data.Models.Bio bio in Model)
+    {
+        @Html.Partial("_Bio", bio);
+    }
+     <div style="clear:left"></div>
+}
+<div id="editActions">
+    @if (User.Identity.IsAuthenticated)
+    {
+        @Html.ActionLink("Create", "Create", "Bio", new { area = "Admin", topic = Url.RequestContext.RouteData.Values["action"].ToString() }, null);
+    }
+</div>

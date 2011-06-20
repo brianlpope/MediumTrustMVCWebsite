@@ -1,0 +1,276 @@
+﻿#maincontent
+{
+    font-size: 11px;
+}
+#maincontent ul, #maincontent ol
+{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#maincontent ul li
+{
+    margin-left: 12px;
+        list-style-type: disc;
+}
+#maincontent ol li
+{
+    margin-left: 20px;
+        list-style-type: decimal;
+}
+#maincontent h4
+{
+    padding: 0;
+    margin-bottom: 2px;
+}
+#maincontent h3
+{
+    padding: 0;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+#maincontent h2
+{
+    margin: 0;
+    margin-bottom: 6px;
+}
+#maincontent p
+{
+    margin-bottom: 8px;
+}
+#maincontent table
+{
+    width: 100%;
+}
+
+#maincontent .publishInfo
+{
+    margin-top: 10px;
+    color: #777;
+    font-size: 10px;
+}
+#maincontent .topicList
+{
+    list-style-type: none;
+}
+#maincontent .topicList li
+{
+        padding: 4px;
+}
+.topicList a
+{
+    display: block;
+}
+.bioCategory
+{
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.bioContainer
+{
+    padding-top: 5px;
+    float:left;
+}
+
+.bioBody
+{
+    float: left;
+    width: 320px;
+}
+.bioPosition
+{
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+
+    padding-bottom: 5px;
+}
+.bioImage
+{
+    height: 125px;
+    width: 110px;
+    border: 1px solid black;
+    margin-right: 10px;
+    float: left;
+}
+.bioName
+{
+    padding-bottom: 6px;
+}
+.bioDesc
+{  
+}
+#maincontent .containerFooter
+{
+    clear: both;
+}
+.bioContainer p
+{
+    margin-top: 0;
+}
+
+.eventContainer
+{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+.eventTitle
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.eventDate
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.eventDesc
+{
+    padding: 10px;
+}
+
+.eventContainer p
+{
+    margin-top: 0;
+}
+.editActions
+{
+    margin: 10px;
+}
+.editActions a
+{
+    padding-right:10px;
+}
+#calendarEventLink
+{
+    padding: 10px;
+}
+#eventCalendarLink
+{
+    padding: 10px;
+}
+#maincontent .editor-label 
+{
+   /* float: left;
+    margin:  0.8em 0 0 0;
+   padding-top: 8px;
+    line-height: 16px;*/
+    display:inline-block;
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom:4px;
+}
+#maincontent .editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+#maincontent .editor-field input[type=text]
+{
+        width: 100%;
+}
+.largetext
+{
+    width: 80%;
+}
+
+/* items for coalition page */
+#PageTitle
+{
+	FONT-SIZE: 24px; 
+	VERTICAL-ALIGN: middle; 
+	COLOR: white; 
+	FONT-FAMILY: 'Georgia', 'Arial Narrow', 'Microsoft Sans Serif'; 
+	HEIGHT: 36px; 
+	BACKGROUND-COLOR: black; 
+	TEXT-ALIGN: center;
+}
+#PageText
+{
+	FONT-FAMILY: 'Georgia', 'Arial', 'Microsoft Sans Serif'; 
+	PADDING-LEFT: 10PX;
+	PADDING-RIGHT: 20PX;
+	/*Padding-bottom: 10px;*/
+	padding-top: 20px;
+	FONT-SIZE: 14PX;
+}
+#SchoolList
+{
+	FONT-FAMILY: 'Arial', 'Microsoft Sans Serif'; 
+	TEXT-ALIGN: center;
+	FONT-SIZE: 14PX;
+	Padding-bottom: 20px;
+}
+.QAContainer div.answer
+{
+    color: #333;
+    margin-top: 6px;
+}
+.QAContainer div.question a
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #000;
+}
+.QAContainer div.question
+{
+    margin-top: 8px;
+}
+.searchResult
+{
+    margin-bottom: 8px;
+}
+.searchResult .url a
+{
+
+}
+.searchResult .value
+{
+}
+.searchResult .published
+{
+    color: #555;
+    font-size: 10px;
+}
+.searchResult .matchCount
+{
+    padding-left: 8px;
+    color: #555;
+    font-size: 10px;
+}
+#downloads .publishInfo
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #777;
+    font-size: 10px;
+}
+div#donate
+{
+    float: right;
+    margin-top: 30px;
+    margin-left: 12px;
+}
+#donate img
+{
+    border-style:none;
+    margin-left: 5px;
+}
+#donate p
+{
+    margin: 0; 
+    margin-bottom: 0.5em; 
+    font-size: 10px; 
+    font-weight: bold;
+}
+#map_canvas
+{
+    width:500px; 
+    height:500px;
+    border: 1px solid black;
+    margin: 0 auto;
+}

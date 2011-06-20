@@ -1,0 +1,40 @@
+﻿ @model ThreeRoads.Data.Models.Article
+ @{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}           
+    <h1>
+        @Model.Title
+    </h1>
+    @*<p>The academy rents space from the <a href="http://www.bellroadchurch.com">Bell Road Assembly of God Church</a>. We are located one block West of the SR-51on Bell Road. Turn South at the stop light at 34th Way (across from Harkins Theaters) to enter the campus. We are in the Education Building on the South end of the property.</p>*@
+    <div>
+    @Html.Raw(Model.Body)
+    </div>
+
+<div id="map_canvas"></div>
+
+<script type="text/javascript">
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(33.640067, -112.007915);  
+        var myOptions = {    
+            zoom: 15,    
+            center: myLatlng,    
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: "Legacy Classical Christian Academy\n3427 E. Bell Road\nPhoenix, AZ 85032\nPhone: 602-923-1402"
+        });
+    }
+
+    function loadScript() {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
+        document.body.appendChild(script);
+    }  
+    
+    window.onload = loadScript;
+</script>

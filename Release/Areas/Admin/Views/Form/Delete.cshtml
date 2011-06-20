@@ -1,0 +1,10 @@
+﻿@model ThreeRoads.Data.Models.Form
+           
+<h2>Delete Confirmation</h2>
+
+<p>Please confirm you want to delete the bio for @Html.Encode(Model.Title)</p>
+
+@using (Html.BeginForm("Delete", "Form", FormMethod.Post, new { id = Model.ID }))
+{
+    <input name="confirmButton" type="submit" value="Delete" />
+}

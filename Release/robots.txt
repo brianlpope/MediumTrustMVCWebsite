@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /Areas/
+Disallow: /App_Code/
+Disallow: /App_Data/
+Disallow: /App_Themes/
+Disallow: /bin/
+Disallow: /Properties/
+Disallow: /Services/
+Disallow: /Infrastructure/
+Disallow: /Models/
+Disallow: /Controllers/
+Disallow: /Helpers/
+Disallow: /Web.config

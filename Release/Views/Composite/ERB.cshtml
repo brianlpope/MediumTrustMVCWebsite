@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.Download>
+
+@{
+    ViewBag.Title = "ERB";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+    ThreeRoads.Data.Models.Article article = ViewBag.ErbArticle;
+}
+
+<div>
+@Html.Partial("_Article", new ViewDataDictionary(article))
+</div>
+
+<div id="downloads">
+@foreach (var item in Model)
+{
+    <div><img src="@Url.Content(string.Format("~/content/image/filetype_icons/icon_{0}.gif", item.FileType))" alt="item.FileType" />&nbsp;<a target="_blank" href="@item.FileName">@item.Title</a></div>
+    <div>@item.Description</div>
+    <div class="publishInfo">updated: @item.UploadDate</div>        
+}
+</div>
+
+

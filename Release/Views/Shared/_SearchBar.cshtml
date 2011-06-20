@@ -1,0 +1,5 @@
+﻿@using (Html.BeginForm("SearchResults", "Composite", FormMethod.Post))
+{
+    <input type="text" class="txt-search" id="query" name="query" value="@ViewData["query"]" maxlength="140" />
+    <input type="submit" class="btn-search" value="Search"  />
+}
