@@ -1,0 +1,10 @@
+﻿@model ThreeRoads.Data.Models.Article
+
+<h2>Delete Confirmation</h2>
+
+<p>Please confirm you want to delete the Article @Html.Encode(Model.Title)</p>
+
+@using (Html.BeginForm("Delete", "Article", FormMethod.Post, new { id = Model.ID }))
+{
+    <input name="confirmButton" type="submit" value="Delete" />
+}

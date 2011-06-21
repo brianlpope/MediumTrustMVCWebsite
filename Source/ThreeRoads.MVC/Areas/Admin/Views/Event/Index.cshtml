@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.Event>
+
+<div>
+    @Html.ActionLink("Create New Event", "Create", "Event")
+</div>
+
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Title
+        </th>
+        <th>
+            Start
+        </th>
+        <th>
+            End
+        </th>
+        <th>
+            Topic
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+        <td>
+            @item.Title
+        </td>
+        <td>
+            @String.Format("{0:g}", item.Start)
+        </td>
+        <td>
+            @String.Format("{0:g}", item.End)
+        </td>
+        <td>
+            @item.Topic
+        </td>
+    </tr>
+}
+
+</table>
+

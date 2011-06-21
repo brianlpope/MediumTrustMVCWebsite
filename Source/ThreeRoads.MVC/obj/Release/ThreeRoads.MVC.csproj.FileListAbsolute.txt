@@ -1,0 +1,9 @@
+d:\_blp\ThreeRoads.MVC\bin\ThreeRoads.MVC.dll
+d:\_blp\ThreeRoads.MVC\bin\ThreeRoads.Data.dll
+d:\_blp\ThreeRoads.MVC\bin\ThreeRoads.Data.SqlServerCe.dll
+D:\_blp\ThreeRoads.MVC\bin\ThreeRoads.MVC.pdb
+D:\_blp\ThreeRoads.MVC\bin\ThreeRoads.Data.SqlServerCe.pdb
+D:\_blp\ThreeRoads.MVC\bin\ThreeRoads.Data.pdb
+D:\_blp\ThreeRoads.MVC\obj\Release\ResolveAssemblyReference.cache
+D:\_blp\ThreeRoads.MVC\obj\Release\ThreeRoads.MVC.dll
+D:\_blp\ThreeRoads.MVC\obj\Release\ThreeRoads.MVC.pdb

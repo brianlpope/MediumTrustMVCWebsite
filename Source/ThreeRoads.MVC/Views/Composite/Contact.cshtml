@@ -1,0 +1,71 @@
+﻿@model ThreeRoads.MVC.Models.Contact
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+<h1>Contact Us</h1>
+
+@{ Html.EnableClientValidation(true); }
+
+    <div>
+        <p>
+            <strong>Legacy Classical Christian Academy</strong><br />
+            3427 E. Bell Road<br />
+            Phoenix, AZ 85032<br />
+            Phone: 602-923-1402
+        </p>
+        <p>
+            Grammar School Principal, Mr. Brian McKinley
+        </p>
+    </div>
+
+
+@using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "Post", OnComplete = "Contact.onComplete" }))
+{
+    @Html.ValidationSummary(true, "A few fields are still empty")
+    <fieldset>
+        <legend>Contact Form</legend>
+        <div>
+            <span class="editor-label">
+                @Html.LabelFor(m => m.Name)
+            </span>
+            <span class="editor-field">@Html.TextBoxFor(m => m.Name)
+                @Html.ValidationMessageFor(m => m.Name)
+            </span>
+        </div>
+        <div>
+            <span class="editor-label">
+                @Html.LabelFor(m => m.Email)
+            </span>
+            <span class="editor-field">
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email)
+            </span>
+        </div>
+        <div>
+            <span class="editor-label">
+                @Html.LabelFor(m => m.Comment)
+            </span>
+            <span class="editor-field">
+                @Html.TextAreaFor(m => m.Comment, 10, 25, null)
+                @Html.ValidationMessageFor(m => m.Comment)
+            </span>
+        </div>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </fieldset>
+    <p id="result">@TempData["Message"]</p>
+}
+
+
+<script type="text/javascript">
+    var Contact = {
+        onComplete: function (content) {
+            var result = eval(content.get_response().get_object());
+
+            var textNode = document.createTextNode(result.message);
+
+            $("#result").appendChild(textNode);
+        }
+    };
+</script>

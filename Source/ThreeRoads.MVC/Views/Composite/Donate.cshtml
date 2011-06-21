@@ -1,0 +1,12 @@
+﻿@model ThreeRoads.Data.Models.Article
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+<div id="donate">
+    <p>Credit Card/Paypal</p>
+    <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9299040">
+        <img src="@Url.Content("~/content/image/donatebtn.png")" alt="PayPal - The safer, easier way to pay online!" />
+    </a>
+</div>
+
+@Html.Partial("_Article")

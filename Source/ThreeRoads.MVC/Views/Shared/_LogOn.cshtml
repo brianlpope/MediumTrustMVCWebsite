@@ -1,0 +1,8 @@
+﻿@if(Request.IsAuthenticated) {
+    <text>Welcome <b>@Context.User.Identity.Name</b>!
+    [ @Html.ActionLink("Log Off", "LogOff", "Account", new { returnUrl = Request.Url.PathAndQuery }, null) ]</text>
+}
+else
+{
+    @:[ @Html.ActionLink("Log On", "LogOn", "Account", new { returnUrl = Url.Content("/Admin/Article/Index") }, new { target="_blank"}) ]
+}

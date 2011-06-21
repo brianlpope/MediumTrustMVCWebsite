@@ -1,0 +1,23 @@
+﻿@model ThreeRoads.Data.Models.Article
+
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<div style="float: right; border: 1px solid black; width: 288px; height:268px; margin:  0 10px 10px 10px;">
+<object classid="clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95" width="288" height="268" codebase="http://www.microsoft.com/Windows/MediaPlayer/">
+<param name="Filename" value="/content/video/legacyintro.wmv">
+<param name="AutoStart" value="true">
+<param name="ShowControls" value="true">
+<param name="BufferingTime" value="2">
+<param name="ShowStatusBar" value="false">
+<param name="AutoSize" value="true">
+<param name="InvokeURLs" value="false"> 
+<embed src="/content/video/legacyintro.wmv" type="application/x-mplayer2" autostart="1" autosize="1" enabled="1" showstatusbar="0" showdisplay="1" showcontrols="1" pluginspage="http://www.microsoft.com/Windows/MediaPlayer/" CODEBASE="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,0,0,0" width="288" height="268"></embed>
+</object>
+</div>
+
+<div>
+@Html.Partial("_Article")
+</div>
+

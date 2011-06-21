@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ThreeRoads.Data.Models.Event>
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+@if(Model.Any())
+{
+    foreach (ThreeRoads.Data.Models.Event evt in Model)
+    {
+        
+        @Html.Partial("EventPart", evt);
+    }
+    
+}
+<div id="editActions">
+    @if (User.Identity.IsAuthenticated)
+    {
+        @Html.ActionLink("Create", "Create", "Event", new { topic = Url.RequestContext.RouteData.Values["action"].ToString() }, null);
+    }
+</div>

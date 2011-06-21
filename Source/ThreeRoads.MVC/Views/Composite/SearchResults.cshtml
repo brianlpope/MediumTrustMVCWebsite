@@ -1,0 +1,27 @@
+﻿@model List<ThreeRoads.Data.Models.SearchResult>
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+<h1>Search Results</h1>
+@foreach (ThreeRoads.Data.Models.SearchResult result in Model)
+{
+    @Html.Partial("_SearchResult", result)
+}
+
+@*<div id="cse" style="width: 100%;">Loading</div>
+<script src="//www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+    google.load('search', '1', { language: 'en' });
+    google.setOnLoadCallback(function () {
+        var customSearchControl = new google.search.CustomSearchControl('017882864097661992890:8ewktrg3r6e');
+        customSearchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
+        customSearchControl.draw('cse');
+    }, true);
+</script>
+<link rel="stylesheet" href="/content/css/googlesearch.css" type="text/css" />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*$("input.gsc-input").css("background","");*/
+    });
+</script>*@

@@ -1,0 +1,15 @@
+﻿<div id="articleContainer">
+    <h2>${title}</h2>
+    <p>${body}</p>
+    <span class="publishInfo">updated: ${publishedOn}</span>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.getJSON('/Dynamic/ArticlePart?topic=welcome', null, function (data) {
+            alert(data.Title);
+        });
+    });
+</script>

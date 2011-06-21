@@ -1,0 +1,42 @@
+﻿@model ThreeRoads.Data.Models.Article
+
+<!-- renders this as a partial view -->
+@{ this.Layout = null;}
+
+<!-- do not remove yet; this is good to know -->
+@*<div>
+@if (ViewData.Eval("subtopic") != null)
+{
+    @ViewData.Eval("subtopic")
+}
+</div>*@
+
+<script type="text/javascript">
+    
+</script>
+
+<div>
+    @if (Model != null)
+    {
+        <h1>@Model.Title</h1>
+        <p>@Html.Raw(Model.Body)</p>
+        if (Model.PublishedOn.HasValue)
+        {
+        <div class="publishInfo">updated: @Model.PublishedOn.Value.ToShortDateString()</div>
+        }
+    }
+</div>
+
+<div class="editActions">
+@if (User.Identity.IsAuthenticated)
+{
+    if (Model != null)
+    {
+        @Html.ActionLink("Edit", "Edit", "Article", new { area="Admin", id=Model.ID }, null)
+    }
+    else
+    {
+        @Html.ActionLink("Create", "Create", Url.RequestContext.RouteData.Values["controller"].ToString(), new { area="Admin", topic = Url.RequestContext.RouteData.Values["topic"].ToString(), id = Model.ID }, null)
+    }
+}
+</div>

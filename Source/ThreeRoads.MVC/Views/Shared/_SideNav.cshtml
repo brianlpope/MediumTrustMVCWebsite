@@ -1,0 +1,96 @@
+﻿<style type="text/css">
+    #sidenav
+    {
+    }
+    #snWrapper
+    {
+        width: 165px;
+        margin-left: 15px;
+    }
+     #sidenav div.fnCol h4
+     {
+     }
+    #sidenav div.fnCol
+    {
+        padding: 2px;
+    }
+    #snWrapper .fnCol p
+    {
+        margin: 0;
+    }
+    #snWrapper .fnCol ul
+    {
+        padding: 0;
+        padding-left: 0;
+        margin: 0;
+    }
+    #snWrapper .fnCol ul li
+    {
+        margin-left: 10px;
+        list-style-type:none;
+    }
+    #sidenav a, #sidenav a:visited
+    {
+        color: #333;
+        font-size: 12px;
+        font-weight: normal;
+        text-decoration: none;
+        padding: 2px;
+    }
+@*    #snWrapper p
+    {
+        padding-top: 6px;
+        margin-left: 10px;
+    }*@
+    #snWrapper div span
+    {
+        margin-left: 6px;
+    }
+    #sidenav .location a, #sidenav .contactus a
+    {
+        margin-left: 18px;
+    }
+    #sidenav p.location, #sidenav p.contactus
+    {
+        position: relative;
+        left: -6px;
+        margin-top: 6px;
+    }
+</style>
+
+<div id="snWrapper">
+    <div style="margin-left: -15px;">
+        <img src="@Url.Content("~/content/image/home.png")" alt="Home" /><a style="margin-left: 2px;" href="@Url.Content("~/")">Home</a>
+    </div>
+    @foreach (SiteMapNode node in SiteMap.RootNode.ChildNodes)
+    {
+        if (node.HasChildNodes)
+        {
+	        <div class="fnCol">
+            <h4>@node.Title</h4>
+                <ul>
+	                @foreach (SiteMapNode childNode in node.ChildNodes)
+                    {
+                        string target = childNode.Url.EndsWith("pdf") ? "target='_blank'" : "";
+                        <li>
+                            @if(!string.IsNullOrEmpty(childNode.ResourceKey)) {
+                                <img style="margin-left: -15px;" src='@string.Concat("../../content/image/", childNode.ResourceKey,".png")' alt="@childNode.ResourceKey" />
+                            }
+                                
+                            <a @target href="@childNode.Url">@childNode.Title</a>
+                        </li>
+                    }
+                </ul>
+	        </div>
+        }
+        else
+        {
+            <li>
+             @if(!string.IsNullOrEmpty(node.ResourceKey)) {
+                                <img style="margin-left: -15px;" src='@string.Concat("../../content/image/", node.ResourceKey,".png")' alt="@node.ResourceKey" />
+                            }
+                <a href="@node.Url">@node.Title</a>
+            </li>
+        }
+    }
+</div>

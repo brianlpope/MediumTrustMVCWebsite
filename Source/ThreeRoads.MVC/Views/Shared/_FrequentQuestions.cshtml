@@ -1,0 +1,7 @@
+﻿@model ThreeRoads.Data.Models.QA
+           
+<li class="QAContainer">
+    <div class="question"><a href="#" onclick="toggleAnswer('@string.Concat("answer", Model.ID)');">@Model.Question</a></div>
+    <div id="@string.Concat("answer", Model.ID)" class="answer" style="display:none">@Html.Raw(Model.Answer)</div>
+</li>
+

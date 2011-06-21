@@ -1,0 +1,10 @@
+C:\_blp\ThreeRoads.Data\bin\Debug\ThreeRoads.Data.dll
+C:\_blp\ThreeRoads.Data\bin\Debug\ThreeRoads.Data.pdb
+C:\_blp\ThreeRoads.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\_blp\ThreeRoads.Data\obj\Debug\ThreeRoads.Data.dll
+C:\_blp\ThreeRoads.Data\obj\Debug\ThreeRoads.Data.pdb
+d:\_blp\ThreeRoads.Data\bin\Debug\ThreeRoads.Data.dll
+d:\_blp\ThreeRoads.Data\bin\Debug\ThreeRoads.Data.pdb
+d:\_blp\ThreeRoads.Data\obj\Debug\ResolveAssemblyReference.cache
+d:\_blp\ThreeRoads.Data\obj\Debug\ThreeRoads.Data.dll
+d:\_blp\ThreeRoads.Data\obj\Debug\ThreeRoads.Data.pdb

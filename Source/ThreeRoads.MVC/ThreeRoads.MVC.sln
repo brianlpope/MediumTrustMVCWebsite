@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeRoads.MVC", "ThreeRoads.MVC.csproj", "{338D5532-07E4-4B0B-AC97-DFD6604C6F3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeRoads.Data", "..\ThreeRoads.Data\ThreeRoads.Data.csproj", "{4F433662-FF13-4DF0-B193-7450762A90E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeRoads.Data.SqlServerCe", "..\ThreeRoads.Data.SqlServerCe\ThreeRoads.Data.SqlServerCe.csproj", "{56958CB1-C71B-4098-A85C-33C1B0F468A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{338D5532-07E4-4B0B-AC97-DFD6604C6F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{338D5532-07E4-4B0B-AC97-DFD6604C6F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{338D5532-07E4-4B0B-AC97-DFD6604C6F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{338D5532-07E4-4B0B-AC97-DFD6604C6F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F433662-FF13-4DF0-B193-7450762A90E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F433662-FF13-4DF0-B193-7450762A90E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F433662-FF13-4DF0-B193-7450762A90E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F433662-FF13-4DF0-B193-7450762A90E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56958CB1-C71B-4098-A85C-33C1B0F468A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56958CB1-C71B-4098-A85C-33C1B0F468A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56958CB1-C71B-4098-A85C-33C1B0F468A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56958CB1-C71B-4098-A85C-33C1B0F468A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+C:\_blp\ThreeRoads.Data.SqlServerCe\bin\Debug\ThreeRoads.Data.SqlServerCe.dll
+C:\_blp\ThreeRoads.Data.SqlServerCe\bin\Debug\ThreeRoads.Data.SqlServerCe.pdb
+C:\_blp\ThreeRoads.Data.SqlServerCe\bin\Debug\ThreeRoads.Data.dll
+C:\_blp\ThreeRoads.Data.SqlServerCe\bin\Debug\ThreeRoads.Data.pdb
+C:\_blp\ThreeRoads.Data.SqlServerCe\obj\Debug\ResolveAssemblyReference.cache
+C:\_blp\ThreeRoads.Data.SqlServerCe\obj\Debug\ThreeRoads.Data.SqlServerCe.dll
+C:\_blp\ThreeRoads.Data.SqlServerCe\obj\Debug\ThreeRoads.Data.SqlServerCe.pdb
+d:\_blp\ThreeRoads.Data.SqlServerCe\bin\Debug\ThreeRoads.Data.SqlServerCe.dll
+d:\_blp\ThreeRoads.Data.SqlServerCe\bin\Debug\ThreeRoads.Data.SqlServerCe.pdb
+d:\_blp\ThreeRoads.Data.SqlServerCe\bin\Debug\ThreeRoads.Data.dll
+d:\_blp\ThreeRoads.Data.SqlServerCe\bin\Debug\ThreeRoads.Data.pdb
+d:\_blp\ThreeRoads.Data.SqlServerCe\obj\Debug\ResolveAssemblyReference.cache
+d:\_blp\ThreeRoads.Data.SqlServerCe\obj\Debug\ThreeRoads.Data.SqlServerCe.dll
+d:\_blp\ThreeRoads.Data.SqlServerCe\obj\Debug\ThreeRoads.Data.SqlServerCe.pdb

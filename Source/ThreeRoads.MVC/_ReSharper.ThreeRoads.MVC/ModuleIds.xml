@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="56958CB1-C71B-4098-A85C-33C1B0F468A3" ModuleId="ThreeRoads.Data.SqlServerCe" />
+  <Module PersistentId="4F433662-FF13-4DF0-B193-7450762A90E8" ModuleId="ThreeRoads.Data" />
+  <Module PersistentId="338D5532-07E4-4B0B-AC97-DFD6604C6F3E" ModuleId="ThreeRoads.MVC" />
+</Modules>

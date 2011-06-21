@@ -1,0 +1,5 @@
+D:\_blp\ThreeRoads.Data\bin\Release\ThreeRoads.Data.dll
+D:\_blp\ThreeRoads.Data\bin\Release\ThreeRoads.Data.pdb
+D:\_blp\ThreeRoads.Data\obj\Release\ResolveAssemblyReference.cache
+D:\_blp\ThreeRoads.Data\obj\Release\ThreeRoads.Data.dll
+D:\_blp\ThreeRoads.Data\obj\Release\ThreeRoads.Data.pdb

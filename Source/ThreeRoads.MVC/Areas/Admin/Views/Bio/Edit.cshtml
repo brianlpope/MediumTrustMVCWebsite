@@ -1,0 +1,63 @@
+﻿@model ThreeRoads.Data.Models.Bio
+
+@{
+    string rootPath = Url.Content(System.Configuration.ConfigurationManager.AppSettings["BioImagePath"]);
+    string imgPath = System.IO.Path.Combine(rootPath, Model.ImageName ?? "");
+}
+
+
+@using (Html.BeginForm("Edit", "Bio", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Bio</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        @Html.HiddenFor(model => model.Topic)
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Category)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("categoryId", (IEnumerable<SelectListItem>)ViewData["categories"])
+         </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <div class="editor-field">
+            <img class="bioImage" src='@imgPath' alt='@Model.Name' />
+           <label for="file">Filename: </label><span>@Html.DisplayTextFor(model => model.ImageName)</span>
+              <input type="file" name="file" id="file" />
+            @Html.ValidationMessageFor(model => model.ImageName)
+        </div>
+                <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Position)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Position)
+            @Html.ValidationMessageFor(model => model.Position)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Bio")
+</div>
+

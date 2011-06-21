@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{338D5532-07E4-4B0B-AC97-DFD6604C6F3E}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThreeRoads.MVC</RootNamespace>
+    <AssemblyName>ThreeRoads.MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <DesktopBuildPackageLocation>..\Publish</DesktopBuildPackageLocation>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <PublishDatabases>false</PublishDatabases>
+    <DeployIisAppPath>Default Web Site/ThreeRoads</DeployIisAppPath>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <DesktopBuildPackageLocation>..\Package\ThreeRoads.MVC.zip</DesktopBuildPackageLocation>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft ADO.NET Entity Framework Feature CTP5\Binaries\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="RouteDebug, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RouteDebug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.Entity\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Web.Helpers" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ArticleController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BioController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DownloadController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QAController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ResourceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EventController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CompositeController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MenuHelper.cs" />
+    <Compile Include="Infrastructure\Helper.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\ChangePassword.cs" />
+    <Compile Include="Models\LogOn.cs" />
+    <Compile Include="Models\Register.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Infrastructure\SqlCeMembershipProvider.cs" />
+    <Compile Include="Infrastructure\SqlCeMembershipUtils.cs" />
+    <Compile Include="Infrastructure\SqlCeRoleProvider.cs" />
+    <Compile Include="Services\AccountServices.cs" />
+    <Compile Include="Services\EmailServices.cs" />
+    <Compile Include="Services\SearchServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ThreeRoads.sdf" />
+    <Content Include="content\css\print.css" />
+    <Content Include="content\css\Reset.css" />
+    <Content Include="content\image\bio\AnitaWynkoop.JPG" />
+    <Content Include="content\image\bio\dhayes_bio.jpg" />
+    <Content Include="content\image\bio\ElizabethGonzolas.JPG" />
+    <Content Include="content\image\bio\Inez_Stempski.jpg" />
+    <Content Include="content\image\bio\MrMcKinley.jpg" />
+    <Content Include="content\image\bio\MrsGrove.jpg" />
+    <Content Include="content\image\bio\MrsPope.jpg" />
+    <Content Include="content\image\bio\MrsSanders.jpg" />
+    <Content Include="content\image\bio\ToddSimpson.jpg" />
+    <Content Include="content\image\bio\Tom Askew.jpg" />
+    <Content Include="content\image\bio\VirginiaMiner.JPG" />
+    <Content Include="content\image\bodybg.jpg" />
+    <Content Include="content\image\Box-Top-Logo.gif" />
+    <Content Include="content\image\Calendar.png" />
+    <Content Include="content\image\coalition.gif" />
+    <Content Include="content\image\contact.png" />
+    <Content Include="content\image\EScrip.jpg" />
+    <Content Include="content\image\facebook.png" />
+    <Content Include="content\image\footerbg.png" />
+    <Content Include="content\image\header.png" />
+    <Content Include="content\image\Home.png" />
+    <Content Include="content\image\linkImages.png" />
+    <Content Include="content\image\no_image.gif" />
+    <Content Include="content\image\spacer.gif" />
+    <Content Include="content\image\videobg.png" />
+    <Content Include="content\image\wrapperbg.png" />
+    <Content Include="content\video\legacyextended.mov" />
+    <Content Include="content\video\legacyshort.mov" />
+    <Content Include="content\video\videobg.png" />
+    <Content Include="Global.asax" />
+    <Content Include="content\css\content.css" />
+    <Content Include="content\css\Site.css" />
+    <Content Include="content\image\location.png" />
+    <Content Include="content\image\logo.png" />
+    <Content Include="content\image\pcccs.png" />
+    <Content Include="content\image\shield.png" />
+    <Content Include="content\script\jquery\jquery-1.4.4-vsdoc.js" />
+    <Content Include="content\script\jquery\jquery.unobtrusive-ajax.js" />
+    <Content Include="content\script\jquery\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="content\script\jquery\jquery.validate-vsdoc.js" />
+    <Content Include="content\script\jquery\jquery.validate.js" />
+    <Content Include="content\script\jquery\jquery.validate.min.js" />
+    <Content Include="content\script\jquery\jquery.validate.unobtrusive.js" />
+    <Content Include="content\script\jquery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="content\script\ajax\MicrosoftAjax.debug.js" />
+    <Content Include="content\script\ajax\MicrosoftAjax.js" />
+    <Content Include="content\script\mvc\MicrosoftMvcAjax.debug.js" />
+    <Content Include="content\script\mvc\MicrosoftMvcAjax.js" />
+    <Content Include="content\script\mvc\MicrosoftMvcValidation.debug.js" />
+    <Content Include="content\script\mvc\MicrosoftMvcValidation.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\SiteLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\SearchResults.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="bin\" />
+    <Folder Include="downloads\erb\" />
+    <Folder Include="Libraries\ckeditor\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\Html.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\Donate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\Staff.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LogOn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\NotFound.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Shared\EditorLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Article\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Bio\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Bio\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Bio\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Bio\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Event\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Event\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Event\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Event\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Resource\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Resource\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Resource\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Resource\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Download\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Download\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Download\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Download\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\BasicArticle.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_QuickInfo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ImageLinks.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_csArticle.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\QA\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\QA\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\QA\Detail.cshtml" />
+    <Content Include="Areas\Admin\Views\QA\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\QA\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThreeRoads.Data.SqlServerCe\ThreeRoads.Data.SqlServerCe.csproj">
+      <Project>{56958CB1-C71B-4098-A85C-33C1B0F468A3}</Project>
+      <Name>ThreeRoads.Data.SqlServerCe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThreeRoads.Data\ThreeRoads.Data.csproj">
+      <Project>{4F433662-FF13-4DF0-B193-7450762A90E8}</Project>
+      <Name>ThreeRoads.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_SearchResult.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Article.cshtml" />
+    <Content Include="Views\Shared\_Bio.cshtml" />
+    <Content Include="Views\Shared\_Event.cshtml" />
+    <Content Include="Views\Shared\_FooterNav.cshtml" />
+    <Content Include="Views\Shared\_FrequentQuestions.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_SideNav.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_SearchBar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\Events.cshtml" />
+    <Content Include="Views\Composite\FrequentQuestions.cshtml" />
+    <Content Include="Views\Composite\Welcome.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\Location.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\Calendar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\downloads.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gallery\Galleries.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gallery\Gallery.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Composite\ERB.cshtml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11173</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,23 @@
+﻿@model ThreeRoads.Data.Models.QA
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<fieldset>
+    <legend>QA</legend>
+
+    <div class="display-label">Question</div>
+    <div class="display-field">@Model.Question</div>
+
+    <div class="display-label">Answer</div>
+    <div class="display-field">@Model.Answer</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
