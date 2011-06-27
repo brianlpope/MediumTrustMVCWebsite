@@ -1,4 +1,6 @@
 # About This Project 
+![Home Page](https://github.com/brianlpope/MediumTrustMVCWebsite/raw/master/img/homepage.png) 
+
 This is a medium-trust website project that was done to try out several new   
 Microsoft technologies.  It uses the Entity Framework 4.1 with a SQL Server CE  
 backend.  This site was hosted at CrystalTech on a shared server.  MySQL was an  
